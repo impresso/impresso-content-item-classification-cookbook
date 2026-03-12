@@ -34,7 +34,7 @@ endif
 
 #: Show help message
 help::
-	@echo "Makefile for content_item_classification processing"
+	@echo "Makefile for TEMPLATE processing"
 	@echo "Usage: make <target>"
 	@echo "Targets:"
 
@@ -56,8 +56,8 @@ include cookbook/setup.mk
 include cookbook/setup_python.mk
 # for asw tool configuration if needed
 # include cookbook/setup_aws.mk
-# for content_item_classification configuration, adapt to your needs
-include cookbook/setup_content_item_classification.mk
+# for TEMPLATE configuration, adapt to your needs
+include cookbook/setup_TEMPLATE.mk
 
 # Load newspaper list configuration and processing rules
 include cookbook/newspaper_list.mk
@@ -66,7 +66,7 @@ include cookbook/newspaper_list.mk
 # SETUP PATHS
 # include all path makefile snippets for s3 collection directories that you need
 include cookbook/paths_rebuilt.mk
-include cookbook/paths_content_item_classification.mk
+include cookbook/paths_TEMPLATE.mk
 
 
 # MAIN TARGETS
@@ -76,14 +76,14 @@ include cookbook/main_targets.mk
 # SYNCHRONIZATION TARGETS
 include cookbook/sync.mk
 include cookbook/sync_rebuilt.mk
-include cookbook/sync_content_item_classification.mk
+include cookbook/sync_TEMPLATE.mk
 
 include cookbook/clean.mk
 
 
 # PROCESSING TARGETS
 include cookbook/processing.mk
-include cookbook/processing_content_item_classification.mk
+include cookbook/processing_TEMPLATE.mk
 
 
 # FUNCTION
