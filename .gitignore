@@ -26,7 +26,5 @@ config.local.mk
 *.dist-info/
 *.whl
 .aws/*
-lib/*_myprocessing.py
-Makefile.myprocessing
 .DS_Store
 Pipfile.lock
