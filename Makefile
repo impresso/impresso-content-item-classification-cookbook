@@ -1,4 +1,4 @@
-# Description: Makefile for template processing
+# Description: Makefile for content item classification processing
 # Read the README.md for more information on how to use this Makefile.
 # Or run `make` for online help.
 
@@ -54,7 +54,7 @@ include cookbook/make_settings.mk
 # SETUP SETTINGS AND TARGETS
 include cookbook/setup.mk
 include cookbook/setup_python.mk
-# for asw tool configuration if needed
+# for aws tool configuration if needed
 # include cookbook/setup_aws.mk
 # for content_item_classification configuration, adapt to your needs
 include cookbook/setup_content_item_classification.mk

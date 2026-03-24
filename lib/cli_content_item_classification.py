@@ -2,7 +2,7 @@
 """
 CLI tool for content item ad classification with smart_open and logging.
 
-This script follows the cookbook CLI template:
+This script follows the cookbook CLI conventions:
 - required `--input` and `--output` arguments
 - smart_open-based local/S3 I/O via get_transport_params()
 - setup_logging() for consistent logging output
@@ -387,7 +387,7 @@ class ContentItemClassificationProcessor:
             self.flush_batch(output_stream, pending, stats)
 
     def extract_record_id(self, record: Dict[str, Any]) -> str:
-        """Extract an ID with a fallback to `c_id` for template-style input rows."""
+        """Extract an ID with a fallback to `c_id` for legacy-style input rows."""
         record_id = as_str(record.get(self.id_field))
         if record_id:
             return record_id
