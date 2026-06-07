@@ -49,6 +49,9 @@ include cookbook/make_settings.mk
 # If you need to use a different shell than /bin/dash, overwrite it here.
 # SHELL := /bin/bash
 
+# INCLUDE-FILES: help.mk
+# Main help index and debug inspection targets
+include cookbook/help.mk
 
 
 # SETUP SETTINGS AND TARGETS
@@ -62,12 +65,16 @@ include cookbook/setup_content_item_classification.mk
 # Load newspaper list configuration and processing rules
 include cookbook/newspaper_list.mk
 
+# FUNCTION
+include cookbook/local_to_s3.mk
 
 # SETUP PATHS
 # include all path makefile snippets for s3 collection directories that you need
-include cookbook/paths_rebuilt.mk
-include cookbook/paths_content_item_classification.mk
 
+include cookbook/paths_rebuilt.mk
+include cookbook/sync_rebuilt.mk
+include cookbook/paths_content_item_classification.mk
+include cookbook/sync_content_item_classification.mk
 
 # MAIN TARGETS
 include cookbook/main_targets.mk
@@ -86,8 +93,9 @@ include cookbook/processing.mk
 include cookbook/processing_content_item_classification.mk
 
 
-# FUNCTION
-include cookbook/local_to_s3.mk
 
+# INCLUDE-FILES: setup_aws.mk
+# AWS configuration targets
+include cookbook/setup_aws.mk
 
 # FURTHER ADDONS
