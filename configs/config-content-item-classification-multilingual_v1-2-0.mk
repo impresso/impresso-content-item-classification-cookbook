@@ -1,0 +1,6 @@
+
+
+
+S3_BUCKET_REBUILT ?= 122-rebuilt-final
+
+S3_PREFIX_NEWSPAPERS_TO_PROCESS_BUCKET ?= 122-rebuilt-final
